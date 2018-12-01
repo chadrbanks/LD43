@@ -6,6 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+    guid: d9b1513bfd90e452b8bb465e3a5e7ce5
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/CardSelectionGameScene.unity
+    guid: 00583d10112d7409d861e1b953aef23d
+  - enabled: 1
+    path: Assets/Scenes/CardSelectionManage.unity
+    guid: d89cc89a7f4bd42308d9768e1ca6dd88
+  - enabled: 1
+    path: Assets/Scenes/DeckSelectionBattle.unity
+    guid: 4313104eab56e4018bf3dd63aaec6967
+  - enabled: 1
+    path: Assets/Scenes/DeckSelectionManage.unity
+    guid: 5cc826ca47abb448f959018ddf9bedc3
+  - enabled: 1
+    path: Assets/Scenes/CreditScene.unity
+    guid: 8b0c99b19cccf4b068e1bddc853b3e22
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: 79aef3cabea754e13a17632938886f5a
+  - enabled: 1
+    path: Assets/Scenes/StartScreen.unity
+    guid: 3f46729e5e73d4f119219ae41ac6b7bb
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: fb4757111389ce44589717e9b6e6e294
   m_configObjects: {}
