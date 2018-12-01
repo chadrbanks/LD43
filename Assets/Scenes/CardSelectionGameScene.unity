@@ -500,7 +500,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000014544, y: -36.1}
+  m_AnchoredPosition: {x: 0.000015258789, y: -36.09999}
   m_SizeDelta: {x: -15.03, y: -127.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &679366901
@@ -535,11 +535,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This is a special move and the description for
-
-    anystats that are part of this will add in to attack
-
-    or into defense'
+  m_Text: This is a special move and the description for any stats that are part of
+    this will add in to attack or into defense
 --- !u!222 &679366902
 CanvasRenderer:
   m_ObjectHideFlags: 0
