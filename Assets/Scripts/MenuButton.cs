@@ -68,7 +68,7 @@ public class MenuButton : MonoBehaviour
         {
             Singleton.data.restartGame();
 
-            SceneManager.LoadScene ("DeckSelectionBattle", LoadSceneMode.Single);
+            SceneManager.LoadScene ("DeckSelectionManage", LoadSceneMode.Single);
         }
         else if (bt == MenuButtonType.Load)
         {
