@@ -12,7 +12,7 @@ public enum MenuButtonType
 
 public class MenuButton : MonoBehaviour
 {
-	public MainEngine engn;
+	//public MainEngine engn;
 	public MenuButtonType bt;
 
 	[SerializeField] private Material m_NormalMaterial;
@@ -60,7 +60,7 @@ public class MenuButton : MonoBehaviour
 
 	void OnMouseUp()
 	{
-        Singleton.data.click.Play();
+        //Singleton.data.click.Play();
 
 		m_Renderer.material = m_OverMaterial;//m_NormalMaterial;
 
@@ -74,6 +74,11 @@ public class MenuButton : MonoBehaviour
         {
             Singleton.data.LoadGame();
             SceneManager.LoadScene("DeckSelectionManage", LoadSceneMode.Single);
+        }
+        else if (bt == MenuButtonType.Back)
+        {
+            //Singleton.data.LoadGame();
+            SceneManager.LoadScene("StartScreen", LoadSceneMode.Single);
         }
         else if (bt == MenuButtonType.Credits)
         {
