@@ -19,7 +19,6 @@ public class OptionBubble : MonoBehaviour
 
     ZombieHandler zombie;
 
-    // Use this for initialization
     void Start()
     {
         m_Renderer.material = m_NormalMaterial;
@@ -71,20 +70,5 @@ public class OptionBubble : MonoBehaviour
         {
             zombie.SelectOption(place);
         }
-        /*
-        foreach( OptionBubble op in zombie.options )
-        {
-            if(op.set == set && op.id != id)
-            {
-                if( id == 1 )
-                {
-                    transform.position = new Vector3(transform.position.x, op.gameObject.transform.position.y, transform.position.z);
-                }
-
-                zombie.options.Remove(op);
-                Destroy( op.gameObject );
-            }
-        }
-        */
     }
 }

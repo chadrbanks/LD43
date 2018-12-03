@@ -128,9 +128,8 @@ public class ZombieHandler : MonoBehaviour
             case 2:
                 {
                     SpawnText("[ 5 minutes later ]");
-                    SpawnText("They busted through!");
+                    SpawnText("I got caught on my way out and took a bite!");
                     SpawnText("Oh my god! What do I do?");
-                    SpawnText("Aghhhhhhhh!");
                     SpawnText("[ Signal Lost ]");
 
                     SpawnQuit();
@@ -149,6 +148,7 @@ public class ZombieHandler : MonoBehaviour
                     SpawnText("It hurts so bad.");
                     SpawnText("Now it sounds like there are even more pounding on my door!");
                     SpawnText("If I wasn't so tired now, I would be so nervous.");
+                    SpawnText("Give me a few minutes, I think I just need to take a rest.");
                     SpawnText("[ Signal Lost ]");
 
                     SpawnQuit();
