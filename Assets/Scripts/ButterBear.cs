@@ -29,7 +29,7 @@ public class ButterBear : MonoBehaviour
 
                 if (holdUpdate >= 2)
                 {
-                    SceneManager.LoadScene("StartScreen", LoadSceneMode.Single);
+                    SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
                 }
                 else
                 {
