@@ -20,18 +20,15 @@ public class Singleton : MonoBehaviour
 	public static Singleton data;
 
 	// CHANGE THESE IN UNITY!
-	public string version = "0.0"; // CHANGE IN UNITY
+	public string version = "0.4"; // CHANGE IN UNITY
 	public ReleaseStatus status;
 	public ReleasePlatform platform;
-	public FloatText gft;
 
-    public List<int> prices = new List<int>();
+	public FloatText gft;
 
     public PlayerData plyr;
 
-    public int raid = 0, startfuel, startcredit;
-
-    public AudioSource click, shipsound;
+    //public AudioSource click, shipsound;
 
 	void Awake()
 	{
@@ -47,36 +44,10 @@ public class Singleton : MonoBehaviour
 		}
     }
 
-    public int getCapacityUse()
-    {
-        return Singleton.data.plyr.goods[1] + Singleton.data.plyr.goods[2] + Singleton.data.plyr.goods[3] + Singleton.data.plyr.goods[4] + Singleton.data.plyr.goods[5];
-    }
-
-    public bool UseFuel()
-    {
-        if (Singleton.data.plyr.neofuel > 0)
-        {
-            Singleton.data.plyr.neofuel--;
-            return true;
-        }
-        else if (Singleton.data.plyr.goods[3] > 0)
-        {
-            Singleton.data.plyr.goods[3]--;
-            return true;
-        }
-
-        return false;
-    }
-
-    public int GetFuel()
-    {
-        return (Singleton.data.plyr.goods[3] + Singleton.data.plyr.neofuel);
-    }
-
     public void restartGame()
     {
         Singleton.data.plyr = new PlayerData();
-
+        /*
         Singleton.data.plyr.ship = 0;
         Singleton.data.plyr.aicore = 0;
         Singleton.data.plyr.aicomp = 0;
@@ -100,6 +71,7 @@ public class Singleton : MonoBehaviour
         Singleton.data.prices.Add(UnityEngine.Random.Range(1, 200));
         Singleton.data.prices.Add(UnityEngine.Random.Range(1, 200));
         Singleton.data.prices.Add(UnityEngine.Random.Range(1, 200));
+        */
     }
 
     public void SaveGame()
@@ -144,6 +116,7 @@ public class Singleton : MonoBehaviour
 [Serializable]
 public class PlayerData
 {
+    /*
     public string shipname;
 
     public int ship = 0;
@@ -151,4 +124,5 @@ public class PlayerData
     public float credits = 0;
     public List<int> goods = new List<int>();
     public int speed, hull, hullmax, capmax, weapons, aicore, aicomp, explored, neofuel;
+    */
 }

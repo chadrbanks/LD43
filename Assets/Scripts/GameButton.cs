@@ -7,18 +7,19 @@ using UnityEngine.SceneManagement;
 
 public enum GameButtonType
 {
-    Home, Cantina, Market, Mine, Explore, Leave, Mine2, Quest, Repair
+    Advance, Quit
 }
 
 public class GameButton : MonoBehaviour
 {
-    //public GameEngine engn;
-    //public GameButtonType bt;
+    //public MainEngine engn;
+    public GameButtonType bt;
+    public ShipEngine shipengn;
 
-    //[SerializeField] private Material m_NormalMaterial;
-    //[SerializeField] private Material m_OverMaterial;
-    //[SerializeField] private Material m_ClickedMaterial;
-    //[SerializeField] private Renderer m_Renderer;
+    [SerializeField] private Material m_NormalMaterial;
+    [SerializeField] private Material m_OverMaterial;
+    [SerializeField] private Material m_ClickedMaterial;
+    [SerializeField] private Renderer m_Renderer;
 
     bool over = false;
 
@@ -27,7 +28,7 @@ public class GameButton : MonoBehaviour
 
     void Start()
     {
-        //m_Renderer.material = m_NormalMaterial;
+        m_Renderer.material = m_NormalMaterial;
     }
 
     void OnMouseOver()
@@ -40,7 +41,7 @@ public class GameButton : MonoBehaviour
 
         if (!over)
         {
-            //m_Renderer.material = m_OverMaterial;
+            m_Renderer.material = m_OverMaterial;
         }
 
         over = true;
@@ -48,68 +49,33 @@ public class GameButton : MonoBehaviour
 
     void OnMouseExit()
     {
-        //m_Renderer.material = m_NormalMaterial;
+        m_Renderer.material = m_NormalMaterial;
         over = false;
         play = true;
     }
 
     void OnMouseDown()
     {
-        
+        m_Renderer.material = m_ClickedMaterial;
     }
 
     void OnMouseUp()
     {
         //Singleton.data.click.Play();
-        /*
-        if (bt == GameButtonType.Leave)
-        {
-            if( engn.Leave( ) )
-            {
-                int encounter = 30;
 
-                if(Singleton.data.plyr.planet == 1)
-                {
-                    if( Random.Range( 1, 100 ) < 50 )
-                        Singleton.data.raid = 1;
-                    else
-                        Singleton.data.raid = 2;
-                }
-                else if (Singleton.data.plyr.planet == 2)
-                {
-                    Singleton.data.raid = 1; // SF
-                }
-                else if (Singleton.data.plyr.planet == 3)
-                {
-                    Singleton.data.raid = 2; // Pirate?
-                }
-                else if (Singleton.data.plyr.planet == 4)
-                {
-                    Singleton.data.raid = 2; // Pirate?
-                }
-                else if (Singleton.data.plyr.planet == 5)
-                {
-                    if (Random.Range(1, 100) < 50)
-                        Singleton.data.raid = 1;
-                    else
-                        Singleton.data.raid = 2;
-                }
+        m_Renderer.material = m_OverMaterial;//m_NormalMaterial;
 
-                if (Random.Range(1, 100) < encounter)
-                {
-                    SceneManager.LoadScene("EncounterScene", LoadSceneMode.Single);
-                }
-                else
-                {
-                    SceneManager.LoadScene("MapScene", LoadSceneMode.Single);
-                }
-            }
-        }
-        else
+        if (bt == GameButtonType.Advance)
         {
-            engn.ClickedButton(bt);
+            shipengn.NextMonth();
         }
-        */
-        SceneManager.LoadScene("DeckSelectionManage", LoadSceneMode.Single);
+        else if (bt == GameButtonType.Quit)
+        {
+            UnityEngine.Application.Quit();
+
+            #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+            #endif
+        }
     }
 }

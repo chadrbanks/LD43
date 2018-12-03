@@ -68,12 +68,12 @@ public class MenuButton : MonoBehaviour
         {
             Singleton.data.restartGame();
 
-            SceneManager.LoadScene ("ZombieScene", LoadSceneMode.Single);
+            SceneManager.LoadScene ("GameScene", LoadSceneMode.Single);
         }
         else if (bt == MenuButtonType.Load)
         {
             Singleton.data.LoadGame();
-            SceneManager.LoadScene("DeckSelectionManage", LoadSceneMode.Single);
+            SceneManager.LoadScene("ZombieScene", LoadSceneMode.Single);
         }
         else if (bt == MenuButtonType.Back)
         {
