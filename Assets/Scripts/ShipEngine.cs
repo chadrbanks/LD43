@@ -12,7 +12,7 @@ public class ShipEngine : MonoBehaviour
     float population, deaths;
     float crime, integrity, FoodStored, FoodMovement;
     int babies, children, working;
-    float agr, civ, eng, med, mil, sci;
+    public float agr, civ, eng, med, mil, sci;
 
     int MonthsPassed, MonthsTogo;
 

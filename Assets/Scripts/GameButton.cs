@@ -12,7 +12,6 @@ public enum GameButtonType
 
 public class GameButton : MonoBehaviour
 {
-    //public MainEngine engn;
     public GameButtonType bt;
     public ShipEngine shipengn;
 
@@ -21,9 +20,8 @@ public class GameButton : MonoBehaviour
     [SerializeField] private Material m_ClickedMaterial;
     [SerializeField] private Renderer m_Renderer;
 
+    public AudioSource hover;
     bool over = false;
-
-    //public AudioSource hover;
     bool play = true;
 
     void Start()
@@ -35,7 +33,7 @@ public class GameButton : MonoBehaviour
     {
         if (play)
         {
-            //hover.Play();
+            hover.Play();
             play = false;
         }
 
