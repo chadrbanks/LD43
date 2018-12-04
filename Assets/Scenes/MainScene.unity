@@ -1844,7 +1844,7 @@ GameObject:
   - component: {fileID: 1714522165}
   - component: {fileID: 1714522164}
   m_Layer: 0
-  m_Name: VersionText (1)
+  m_Name: MainText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
