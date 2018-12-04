@@ -71,11 +71,7 @@ public class GameButton : MonoBehaviour
         }
         else if (bt == GameButtonType.Quit)
         {
-            UnityEngine.Application.Quit();
-
-            #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-            #endif
+            SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
         }
     }
 }
